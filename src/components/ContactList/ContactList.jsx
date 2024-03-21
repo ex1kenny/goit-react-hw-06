@@ -7,9 +7,9 @@ import css from "./ContactList.module.css";
 
 export default function ContactList() {
   const inputFilter = useSelector(selectNameFilter);
-  const value = useSelector(selectContacts);
-  const visibleUsers = value.filter((value) =>
-    value.name.toLowerCase().includes(inputFilter.toLowerCase())
+  const items = useSelector(selectContacts);
+  const visibleUsers = items.filter((items) =>
+    items.name.toLowerCase().includes(inputFilter.toLowerCase())
   );
   return (
     <div className={css.container}>

@@ -27,8 +27,8 @@ export default function ContactForm() {
       <Formik
         initialValues={{ name: "", number: "" }}
         validationSchema={ConSchema}
-        onSubmit={(values, action) => {
-          dispath(addContact(values));
+        onSubmit={(items, action) => {
+          dispath(addContact(items));
           action.resetForm();
         }}
       >
